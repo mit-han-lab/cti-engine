@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mit-han-lab/cti-engine/main/assets/mark.svg" alt="cti" width="120">
+  <img src="https://raw.githubusercontent.com/mit-han-lab/cti-engine/main/assets/mark.svg" alt="CTI" width="48">
 </p>
 
-# cti
+# CTI
 
 **Continuous Training and Inference** — a single-GPU engine that serves and fine-tunes the same model instance.
 
@@ -16,7 +16,7 @@
 
 ## About
 
-cti serves OpenAI-compatible inference and runs LoRA fine-tuning against one model
+CTI serves OpenAI-compatible inference and runs LoRA fine-tuning against one model
 instance on one GPU. Serving and training take turns rather than running side by side, so
 there is no second copy of the model and no weight transfer between the two. This is an
 early release: the surface below is what we have tested, not what we plan.
@@ -174,7 +174,7 @@ Completed items remain visible as `- [x] ~~completed item~~`.
 
 ## Acknowledgments
 
-cti began from [Mini-SGLang](https://github.com/sgl-project/mini-sglang) and
+CTI began from [Mini-SGLang](https://github.com/sgl-project/mini-sglang) and
 was substantially restructured for continuous inference and training. We also learned
 from the architecture and engineering of [SGLang](https://github.com/sgl-project/sglang),
 [vLLM](https://github.com/vllm-project/vllm),
@@ -193,7 +193,7 @@ not vendored source.
 
 ## License
 
-cti is released under the MIT License — see
+CTI is released under the MIT License — see
 [`LICENSE`](https://github.com/mit-han-lab/cti-engine/blob/main/LICENSE).
 Original cti code and modifications are copyright 2026 cti contributors.
 Files adapted from third-party projects keep their upstream licenses and notices, as
