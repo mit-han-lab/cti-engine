@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mit-han-lab/cti-engine/main/assets/mark.svg" alt="CTI" width="48">
-</p>
-
-# CTI
+# <img src="https://raw.githubusercontent.com/mit-han-lab/cti-engine/main/assets/mark.svg" alt="" width="36" align="absmiddle"> CTI
 
 **Continuous Training and Inference** — a single-GPU engine that serves and fine-tunes the same model instance.
 
