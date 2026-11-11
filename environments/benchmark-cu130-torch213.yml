@@ -1,0 +1,76 @@
+# Formal single-GPU benchmark profile. This file pins the complete ABI-bound and
+# performance-sensitive stack; public metadata repeats only required runtime packages.
+name: cti-cu130-torch213
+channels:
+  - nvidia/label/cuda-13.1.0
+  # For what the label lacks: cuda-version and part of the CUDA runtime packages.
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - pip=26.1.2
+  # Its ptxas, 13.1.80, is the build Triton 3.7.1 bundles. Importing FlashInfer points
+  # Triton's Blackwell ptxas at the ptxas on PATH, and CUDA 13.0's fuses packed f32x2
+  # multiply/add into FFMA.
+  - cuda-toolkit=13.1.0
+  # The toolkit's tileiras, which FlashInfer's cuTile probe runs: the label's 13.1.80
+  # build 0 segfaults in the dynamic loader on every run; build 1 is the same release.
+  - nvidia::cuda-tileiras=13.1.80=*_1
+  # Holds GCC at 14.4.0, the newest CUDA 13.0's nvcc accepted; 13.1's accepts GCC 15.
+  # Every gcc_impl build requires its own libsanitizer, while a gcc_linux-64 pin would
+  # add an x86_64 cross compiler on aarch64.
+  - libsanitizer=14.4.0
+  # Holds the compilers' sysroot at glibc 2.34 (and its kernel headers, which 6.12 ties to
+  # 2.39): with 2.39, C++ JIT modules (FlashInfer's) reference glibc 2.38 symbols such as
+  # __isoc23_strtol, which glibc 2.35 hosts (Ubuntu 22.04) cannot load.
+  - sysroot_linux-64=2.34
+  - kernel-headers_linux-64=5.14.0
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - setuptools==81.0.0
+      - wheel==0.47.0
+      - torch==2.13.0+cu130
+      - triton==3.7.1
+      # PyTorch 2.13's exact cuSPARSELt dependency; bootstrap repairs its
+      # malformed Arm64 internal platform tag without changing its payload.
+      - nvidia-cusparselt-cu13==0.8.1
+      - flashinfer-python==0.7.0.post1
+      # FlashInfer 0.7's Python CUDA and NCCL bindings, and the floors it raised
+      # (cudnn-frontend >= 1.29, cuda-tile >= 1.4).
+      - cuda-python==13.3.1
+      - cuda-core==1.0.1
+      - cuda-pathfinder==1.8.3
+      - nccl4py==0.6.0
+      - nccl-extensions==0.1.0
+      - nvidia-cudnn-frontend==1.31.0
+      - cuda-tile==1.6.0
+      # SGLang Kernel 0.4.6.post1's published Torch 2.13 ABI pair.
+      - sglang-kernel==0.4.6.post1
+      - liger-kernel==0.8.0
+      # cti-kernels[gdn] provider; its einops dependency is pinned below.
+      - fla-core==0.5.2
+      # Bootstrap force-reinstalls this version from the separately locked source.
+      - torch-memory-saver==0.0.9.post1
+      # No-build-isolation prerequisites for the separately locked FA2 source build.
+      - einops==0.8.2
+      - ninja==1.13.0
+      - packaging==26.2
+      - psutil==7.2.2
+      # Runtime and JIT packages that can change kernels or model behavior.
+      - transformers==5.16.1
+      - huggingface-hub==1.30.0
+      - tokenizers==0.23.2
+      - safetensors==0.8.0
+      - peft==0.19.1
+      - apache-tvm-ffi==0.1.12
+      - quack-kernels==0.6.5
+      # CuTe DSL's cu13 extra adds CUDA 13 libraries; upstream also requires cu12.
+      # List the library packages so environment verification checks the full closure.
+      - nvidia-cutlass-dsl[cu13]==4.8.0
+      - nvidia-cutlass-dsl-libs-base==4.8.0
+      - nvidia-cutlass-dsl-libs-core==4.8.0
+      - nvidia-cutlass-dsl-libs-cu12==4.8.0
+      - nvidia-cutlass-dsl-libs-cu13==4.8.0
+      - cuda-bindings==13.3.1
+      - numpy==2.5.0
+      - PyYAML==6.0.3

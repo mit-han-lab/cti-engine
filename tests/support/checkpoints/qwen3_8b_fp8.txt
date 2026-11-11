@@ -1,0 +1,59 @@
+# Qwen/Qwen3-8B-FP8@220b46e3b2180893580a4454f21f22d3ebb187d3: documents and safetensors headers, compacted by
+# tests/support/quant_checkpoints.py
+[config.json]
+{
+ "architectures": ["Qwen3ForCausalLM"],
+ "attention_bias": false,
+ "attention_dropout": 0.0,
+ "bos_token_id": 151643,
+ "eos_token_id": 151645,
+ "head_dim": 128,
+ "hidden_act": "silu",
+ "hidden_size": 4096,
+ "initializer_range": 0.02,
+ "intermediate_size": 12288,
+ "max_position_embeddings": 40960,
+ "max_window_layers": 36,
+ "model_type": "qwen3",
+ "num_attention_heads": 32,
+ "num_hidden_layers": 36,
+ "num_key_value_heads": 8,
+ "rms_norm_eps": 1e-06,
+ "rope_scaling": null,
+ "rope_theta": 1000000,
+ "sliding_window": null,
+ "tie_word_embeddings": false,
+ "torch_dtype": "bfloat16",
+ "transformers_version": "4.51.0",
+ "use_cache": true,
+ "use_sliding_window": false,
+ "vocab_size": 151936,
+ "quantization_config": {
+  "activation_scheme": "dynamic",
+  "fmt": "e4m3",
+  "quant_method": "fp8",
+  "weight_block_size": [128, 128]
+ }
+}
+[tensors]
+BF16[128] model.layers.{0-35}.self_attn.k_norm.weight
+BF16[128] model.layers.{0-35}.self_attn.q_norm.weight
+BF16[151936,4096] lm_head.weight
+BF16[151936,4096] model.embed_tokens.weight
+BF16[32,32] model.layers.{0-35}.self_attn.o_proj.weight_scale_inv
+BF16[32,32] model.layers.{0-35}.self_attn.q_proj.weight_scale_inv
+BF16[32,96] model.layers.{0-35}.mlp.down_proj.weight_scale_inv
+BF16[4096] model.layers.{0-35}.input_layernorm.weight
+BF16[4096] model.layers.{0-35}.post_attention_layernorm.weight
+BF16[4096] model.norm.weight
+BF16[8,32] model.layers.{0-35}.self_attn.k_proj.weight_scale_inv
+BF16[8,32] model.layers.{0-35}.self_attn.v_proj.weight_scale_inv
+BF16[96,32] model.layers.{0-35}.mlp.gate_proj.weight_scale_inv
+BF16[96,32] model.layers.{0-35}.mlp.up_proj.weight_scale_inv
+F8_E4M3[1024,4096] model.layers.{0-35}.self_attn.k_proj.weight
+F8_E4M3[1024,4096] model.layers.{0-35}.self_attn.v_proj.weight
+F8_E4M3[12288,4096] model.layers.{0-35}.mlp.gate_proj.weight
+F8_E4M3[12288,4096] model.layers.{0-35}.mlp.up_proj.weight
+F8_E4M3[4096,12288] model.layers.{0-35}.mlp.down_proj.weight
+F8_E4M3[4096,4096] model.layers.{0-35}.self_attn.o_proj.weight
+F8_E4M3[4096,4096] model.layers.{0-35}.self_attn.q_proj.weight

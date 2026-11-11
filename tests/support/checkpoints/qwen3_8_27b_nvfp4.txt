@@ -1,0 +1,376 @@
+# nvidia/Qwen3.8-27B-NVFP4@482ca0f3832238542f8f5295dde86b5f22711d80: documents and safetensors headers, compacted by
+# tests/support/quant_checkpoints.py
+[config.json]
+{
+ "architectures": ["Qwen3_5ForConditionalGeneration"],
+ "dtype": "bfloat16",
+ "image_token_id": 248056,
+ "language_model_only": false,
+ "model_type": "qwen3_5",
+ "text_config": {
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "attn_output_gate": true,
+  "bos_token_id": 248044,
+  "dtype": "bfloat16",
+  "eos_token_id": 248044,
+  "full_attention_interval": 4,
+  "head_dim": 256,
+  "hidden_act": "silu",
+  "hidden_size": 5120,
+  "initializer_range": 0.02,
+  "intermediate_size": 17408,
+  "layer_types": ["linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention"],
+  "linear_conv_kernel_dim": 4,
+  "linear_key_head_dim": 128,
+  "linear_num_key_heads": 16,
+  "linear_num_value_heads": 48,
+  "linear_value_head_dim": 128,
+  "mamba_ssm_dtype": "float32",
+  "max_position_embeddings": 262144,
+  "model_type": "qwen3_5_text",
+  "mtp_num_hidden_layers": 1,
+  "mtp_use_dedicated_embeddings": false,
+  "num_attention_heads": 24,
+  "num_hidden_layers": 64,
+  "num_key_value_heads": 4,
+  "output_gate_type": "swish",
+  "pad_token_id": null,
+  "partial_rotary_factor": 0.25,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+   "mrope_interleaved": true,
+   "mrope_section": [11, 11, 10],
+   "partial_rotary_factor": 0.25,
+   "rope_theta": 10000000,
+   "rope_type": "default"
+  },
+  "tie_word_embeddings": false,
+  "use_cache": true,
+  "vocab_size": 248320
+ },
+ "tie_word_embeddings": false,
+ "transformers_version": "5.13.1",
+ "video_token_id": 248057,
+ "vision_config": {
+  "deepstack_visual_indexes": [],
+  "depth": 27,
+  "dtype": "bfloat16",
+  "hidden_act": "gelu_pytorch_tanh",
+  "hidden_size": 1152,
+  "in_channels": 3,
+  "initializer_range": 0.02,
+  "intermediate_size": 4304,
+  "model_type": "qwen3_5_vision",
+  "num_heads": 16,
+  "num_position_embeddings": 2304,
+  "out_hidden_size": 5120,
+  "patch_size": 16,
+  "spatial_merge_size": 2,
+  "temporal_patch_size": 2
+ },
+ "vision_end_token_id": 248054,
+ "vision_start_token_id": 248053,
+ "quantization_config": {
+  "config_groups": {
+   "group_0": {
+    "input_activations": {
+     "dynamic": false,
+     "num_bits": 8,
+     "type": "float"
+    },
+    "weights": {
+     "dynamic": false,
+     "num_bits": 8,
+     "type": "float"
+    },
+    "targets": {
+     "$names": [
+      "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv",
+      "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z",
+      "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj",
+      "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj",
+      "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj",
+      "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj",
+      "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj"
+     ]
+    }
+   },
+   "group_1": {
+    "input_activations": {
+     "dynamic": false,
+     "num_bits": 4,
+     "type": "float",
+     "group_size": 16
+    },
+    "weights": {
+     "dynamic": false,
+     "num_bits": 4,
+     "type": "float",
+     "group_size": 16
+    },
+    "targets": {
+     "$names": [
+      "lm_head",
+      "model.language_model.layers.{0-63}.mlp.down_proj",
+      "model.language_model.layers.{0-63}.mlp.gate_proj",
+      "model.language_model.layers.{0-63}.mlp.up_proj"
+     ]
+    }
+   }
+  },
+  "quantized_layers": {
+   "$modules": [
+    [
+     "lm_head",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.down_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.gate_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.up_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ]
+   ]
+  },
+  "ignore": ["mtp*", "mtp.layers.0*"],
+  "quant_algo": "MIXED_PRECISION",
+  "producer": {
+   "name": "modelopt",
+   "version": "0.47.0.dev80+g913f5e224"
+  },
+  "quant_method": "modelopt"
+ }
+}
+[hf_quant_config.json]
+{
+ "producer": {
+  "name": "modelopt",
+  "version": "0.47.0.dev80+g913f5e224"
+ },
+ "quantization": {
+  "quant_algo": "MIXED_PRECISION",
+  "kv_cache_quant_algo": null,
+  "quantized_layers": {
+   "$modules": [
+    [
+     "lm_head",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.down_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.gate_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-63}.mlp.up_proj",
+     {
+      "group_size": 16,
+      "quant_algo": "NVFP4"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ],
+    [
+     "model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj",
+     {
+      "quant_algo": "FP8"
+     }
+    ]
+   ]
+  },
+  "exclude_modules": ["mtp*", "mtp.layers.0*"]
+ }
+}
+[tensors]
+BF16[1024,5120] mtp.layers.{0}.self_attn.k_proj.weight
+BF16[1024,5120] mtp.layers.{0}.self_attn.v_proj.weight
+BF16[10240,1,4] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.conv1d.weight
+BF16[1152,1152] model.visual.blocks.{0-26}.attn.proj.weight
+BF16[1152,3,2,16,16] model.visual.patch_embed.proj.weight
+BF16[1152,4304] model.visual.blocks.{0-26}.mlp.linear_fc2.weight
+BF16[1152] model.visual.blocks.{0-26}.attn.proj.bias
+BF16[1152] model.visual.blocks.{0-26}.mlp.linear_fc2.bias
+BF16[1152] model.visual.blocks.{0-26}.norm1.bias
+BF16[1152] model.visual.blocks.{0-26}.norm1.weight
+BF16[1152] model.visual.blocks.{0-26}.norm2.bias
+BF16[1152] model.visual.blocks.{0-26}.norm2.weight
+BF16[1152] model.visual.merger.norm.bias
+BF16[1152] model.visual.merger.norm.weight
+BF16[1152] model.visual.patch_embed.proj.bias
+BF16[12288,5120] mtp.layers.{0}.self_attn.q_proj.weight
+BF16[128] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.norm.weight
+BF16[17408,5120] mtp.layers.{0}.mlp.gate_proj.weight
+BF16[17408,5120] mtp.layers.{0}.mlp.up_proj.weight
+BF16[2304,1152] model.visual.pos_embed.weight
+BF16[248320,5120] model.language_model.embed_tokens.weight
+BF16[256] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_norm.weight
+BF16[256] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_norm.weight
+BF16[256] mtp.layers.{0}.self_attn.k_norm.weight
+BF16[256] mtp.layers.{0}.self_attn.q_norm.weight
+BF16[3456,1152] model.visual.blocks.{0-26}.attn.qkv.weight
+BF16[3456] model.visual.blocks.{0-26}.attn.qkv.bias
+BF16[4304,1152] model.visual.blocks.{0-26}.mlp.linear_fc1.weight
+BF16[4304] model.visual.blocks.{0-26}.mlp.linear_fc1.bias
+BF16[4608,4608] model.visual.merger.linear_fc1.weight
+BF16[4608] model.visual.merger.linear_fc1.bias
+BF16[48,5120] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_a.weight
+BF16[48,5120] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_b.weight
+BF16[48] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.A_log
+BF16[48] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.dt_bias
+BF16[5120,10240] mtp.fc.weight
+BF16[5120,17408] mtp.layers.{0}.mlp.down_proj.weight
+BF16[5120,4608] model.visual.merger.linear_fc2.weight
+BF16[5120,6144] mtp.layers.{0}.self_attn.o_proj.weight
+BF16[5120] model.language_model.layers.{0-63}.input_layernorm.weight
+BF16[5120] model.language_model.layers.{0-63}.post_attention_layernorm.weight
+BF16[5120] model.language_model.norm.weight
+BF16[5120] model.visual.merger.linear_fc2.bias
+BF16[5120] mtp.layers.{0}.input_layernorm.weight
+BF16[5120] mtp.layers.{0}.post_attention_layernorm.weight
+BF16[5120] mtp.norm.weight
+BF16[5120] mtp.pre_fc_norm_embedding.weight
+BF16[5120] mtp.pre_fc_norm_hidden.weight
+F32[] lm_head.input_scale
+F32[] lm_head.weight_scale_2
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv.input_scale
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv.weight_scale
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z.input_scale
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z.weight_scale
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj.input_scale
+F32[] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj.weight_scale
+F32[] model.language_model.layers.{0-63}.mlp.down_proj.input_scale
+F32[] model.language_model.layers.{0-63}.mlp.down_proj.weight_scale_2
+F32[] model.language_model.layers.{0-63}.mlp.gate_proj.input_scale
+F32[] model.language_model.layers.{0-63}.mlp.gate_proj.weight_scale_2
+F32[] model.language_model.layers.{0-63}.mlp.up_proj.input_scale
+F32[] model.language_model.layers.{0-63}.mlp.up_proj.weight_scale_2
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj.input_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj.weight_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj.input_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj.weight_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj.input_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj.weight_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj.input_scale
+F32[] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj.weight_scale
+F8_E4M3[1024,5120] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.k_proj.weight
+F8_E4M3[1024,5120] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.v_proj.weight
+F8_E4M3[10240,5120] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_qkv.weight
+F8_E4M3[12288,5120] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.q_proj.weight
+F8_E4M3[17408,320] model.language_model.layers.{0-63}.mlp.gate_proj.weight_scale
+F8_E4M3[17408,320] model.language_model.layers.{0-63}.mlp.up_proj.weight_scale
+F8_E4M3[248320,320] lm_head.weight_scale
+F8_E4M3[5120,1088] model.language_model.layers.{0-63}.mlp.down_proj.weight_scale
+F8_E4M3[5120,6144] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.out_proj.weight
+F8_E4M3[5120,6144] model.language_model.layers.{3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63}.self_attn.o_proj.weight
+F8_E4M3[6144,5120] model.language_model.layers.{0-2,4-6,8-10,12-14,16-18,20-22,24-26,28-30,32-34,36-38,40-42,44-46,48-50,52-54,56-58,60-62}.linear_attn.in_proj_z.weight
+U8[17408,2560] model.language_model.layers.{0-63}.mlp.gate_proj.weight
+U8[17408,2560] model.language_model.layers.{0-63}.mlp.up_proj.weight
+U8[248320,2560] lm_head.weight
+U8[5120,8704] model.language_model.layers.{0-63}.mlp.down_proj.weight

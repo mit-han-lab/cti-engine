@@ -1,0 +1,35 @@
+model:
+  path: Qwen/Qwen3-0.6B
+  initialization_seed: 42
+
+memory:
+  inference_ratio: 0.7
+
+scheduling:
+  max_running_requests: 8
+  max_batch_tokens: 2048
+
+cache:
+  prefix: radix
+
+lora:
+  targets: [attention]
+  rank: 16
+  alpha: 32.0
+
+training:
+  trainable_plan: {}
+  optimizer:
+    lr: 0.0001
+    betas: [0.9, 0.999]
+    eps: 1.0e-8
+    weight_decay: 0.0
+    max_grad_norm: 1.0
+  batching:
+    layout: padded
+    policy:
+      kind: static_batching
+      microbatch_size: 2
+      max_tokens_per_sample: 512
+  activation_checkpointing: full
+  training_pause_boundary: microbatch

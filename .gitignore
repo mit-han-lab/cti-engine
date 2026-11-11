@@ -1,0 +1,50 @@
+# pycache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# installed packages
+*.dist-info/
+*.egg-info/
+
+# json files
+*.json
+*.jsonl
+!tests/gpu/training/lora_training_trajectory_golden.json
+!tests/gpu/training/qwen3_moe_lora_trajectory_golden.json
+!tests/gpu/models/parity_prompts.json
+!tests/gpu/models/qwen3_5_parity_prompts.json
+!tests/gpu/checkpoint_manifest.json
+!tests/modules/models/peft_adapters/*/adapter_config.json
+
+# profiling data
+*.nsys-rep
+*.ncu-rep
+
+# generated compiler caches
+/unsloth_compiled_cache/
+
+# binaries
+build/
+dist/
+*.tar.gz
+
+# virtual environment
+.venv/
+venv/
+env/
+
+# clangd config
+.clangd
+
+# .vscode
+.vscode/
+.coverage
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+
+# the container image's source revision, written by its build
+/REVISION
+# wheels placed for an offline container build
+/docker/wheels/

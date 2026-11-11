@@ -1,0 +1,98 @@
+[tp 1, rank 0]
+model.embed_tokens.weight (67, 32)
+model.layers.0.self_attn.qkv_proj.weight (768, 32) | q[0:512] k[512:640] v[640:768]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 512) | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (8, 32, 32)
+model.layers.0.mlp.experts.down_proj (8, 32, 16)
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (67, 32)
+attention 0: 8 query, 2 KV heads of 64
+[tp 2, rank 0]
+model.embed_tokens.weight (34, 32) rows[0:34]/34
+model.layers.0.self_attn.qkv_proj.weight (384, 32) rows[0:256] rows[0:64] rows[0:64] | q[0:256] k[256:320] v[320:384]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[0:256] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (4, 32, 32) experts[0:4]
+model.layers.0.mlp.experts.down_proj (4, 32, 16) experts[0:4]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (34, 32) rows[0:34]/34
+attention 0: 4 query, 1 KV heads of 64
+[tp 2, rank 1]
+model.embed_tokens.weight (34, 32) rows[34:67]/34
+model.layers.0.self_attn.qkv_proj.weight (384, 32) rows[256:512] rows[64:128] rows[64:128] | q[0:256] k[256:320] v[320:384]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[256:512] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (4, 32, 32) experts[4:8]
+model.layers.0.mlp.experts.down_proj (4, 32, 16) experts[4:8]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (34, 32) rows[34:67]/34
+attention 0: 4 query, 1 KV heads of 64
+[tp 4, rank 0]
+model.embed_tokens.weight (17, 32) rows[0:17]/17
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[0:128] rows[0:64]*2@0 rows[0:64]*2@0 | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[0:128] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[0:2]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[0:2]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[0:17]/17
+attention 0: 2 query, 1 KV heads of 64
+[tp 4, rank 1]
+model.embed_tokens.weight (17, 32) rows[17:34]/17
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[128:256] rows[0:64]*2@1 rows[0:64]*2@1 | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[128:256] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[2:4]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[2:4]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[17:34]/17
+attention 0: 2 query, 1 KV heads of 64
+[tp 4, rank 2]
+model.embed_tokens.weight (17, 32) rows[34:51]/17
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[256:384] rows[64:128]*2@0 rows[64:128]*2@0 | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[256:384] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[4:6]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[4:6]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[34:51]/17
+attention 0: 2 query, 1 KV heads of 64
+[tp 4, rank 3]
+model.embed_tokens.weight (17, 32) rows[51:67]/17
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[384:512] rows[64:128]*2@1 rows[64:128]*2@1 | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[384:512] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[6:8]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[6:8]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[51:67]/17
+attention 0: 2 query, 1 KV heads of 64

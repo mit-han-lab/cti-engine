@@ -1,0 +1,12 @@
+# Prebuilt flash-attn wheels of the locked source (flash-attention-source.txt) for the
+# profile's Torch/CUDA, SM120 images only. Every cti-kernel release carries them beside the
+# kernel wheel.
+cuda_arches = ["120"]
+
+[wheels.x86_64]
+file = "flash_attn-2.8.3.post1-cp312-cp312-linux_x86_64.whl"
+sha256 = "3e8f6edd3c2f20ec3a668f7c60c6da8ec0adfb5517979bb1ee0b50e06927e3b7"
+
+[wheels.aarch64]
+file = "flash_attn-2.8.3.post1-cp312-cp312-linux_aarch64.whl"
+sha256 = "d29013ab8bbcfab10f1df2b9e0d834f5ff807e6d4004fd1b0a4ec5c0bb235493"

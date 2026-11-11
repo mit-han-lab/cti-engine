@@ -1,0 +1,17 @@
+model:
+  path: Qwen/Qwen3-0.6B
+
+memory:
+  inference_ratio: 0.8
+
+scheduling:
+  max_running_requests: 32
+  max_batch_tokens: 4096
+
+cache:
+  prefix: radix
+
+server:
+  host: 127.0.0.1
+  port: 1919
+  num_tokenizers: 1

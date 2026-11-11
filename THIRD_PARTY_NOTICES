@@ -1,0 +1,466 @@
+THIRD-PARTY NOTICES
+
+cti is MIT licensed; the files listed below adapt third-party code and keep
+their upstream licenses and notices.
+
+cti is licensed under the MIT License in the root LICENSE file, which covers
+original cti source. For each upstream project whose code cti adapts,
+this file records the fixed upstream revision, the cti files derived from it,
+and the upstream license text and copyright notices those files remain subject to.
+Each listed file also names its upstream, revision and original path in its header.
+Ordinary external dependencies are not relicensed or reproduced here; their own
+distributions carry their terms.
+
+Original cti source and cti modifications are copyright 2026 cti
+contributors. In adapted files, the cti copyright line covers those local
+modifications; it does not replace or diminish the upstream attribution recorded
+alongside it.
+
+Source comments that cite another project as a behaviour or semantics reference
+("follows", "checked against", "written from ...; no code is copied") record design
+provenance only; no code from those projects is incorporated.
+
+Summary of upstream licenses:
+- Mini-SGLang: MIT
+- Hugging Face Transformers: Apache-2.0
+- DFlash (z-lab/dflash): MIT
+`python/cti/layers/rotary.py` adapts both Mini-SGLang and Transformers and is
+subject to both licenses.
+
+===============================================================================
+Mini-SGLang
+===============================================================================
+
+Substantial portions of the runtime began from Mini-SGLang and have since been
+restructured and extended by cti. Mini-SGLang describes itself as a compact
+implementation of SGLang, and cti also cites public SGLang architecture as a
+design reference:
+https://github.com/sgl-project/sglang
+
+No production source from the full SGLang repository is separately incorporated
+outside this Mini-SGLang lineage. The installed sglang-kernel package remains an
+external dependency and carries its own distribution terms.
+
+Upstream project:
+https://github.com/sgl-project/mini-sglang
+
+Fixed base revision:
+9a91cfafe754aa85daee49998176275667eb58f2
+
+Upstream license: MIT, copyright (c) 2026 sgl-project, reproduced verbatim below.
+Each file listed here carries the upstream copyright line, this fixed revision and
+its original `python/minisgl/...` path(s) in its header.
+
+Files adapted from Mini-SGLang:
+- `python/cti/attention/base.py`
+- `python/cti/attention/flash_attention.py`
+- `python/cti/attention/flashinfer.py`
+- `python/cti/attention/mha.py`
+- `python/cti/attention/paged.py`
+- `python/cti/attention/tensorrt_llm.py`
+- `python/cti/distributed/__init__.py`
+- `python/cti/distributed/runtime.py`
+- `python/cti/env.py`
+- `python/cti/inference/_control/_cache.py`
+- `python/cti/inference/_control/_engine.py`
+- `python/cti/inference/_control/_scheduler.py`
+- `python/cti/inference/_control/_scheduling/prefill.py`
+- `python/cti/inference/_control/_scheduling/request.py`
+- `python/cti/inference/_control/_scheduling/strategy.py`
+- `python/cti/inference/_control/_scheduling/table.py`
+- `python/cti/inference/_execution/_graphs.py`
+- `python/cti/inference/_execution/runner.py`
+- `python/cti/inference/_execution/_sampling.py`
+- `python/cti/kvcache/base.py`
+- `python/cti/kvcache/budget.py`
+- `python/cti/kvcache/__init__.py`
+- `python/cti/kvcache/naive_cache.py`
+- `python/cti/kvcache/radix_cache.py`
+- `python/cti/layers/attention.py`
+- `python/cti/layers/base.py`
+- `python/cti/layers/embedding.py`
+- `python/cti/layers/__init__.py`
+- `python/cti/layers/linear.py`
+- `python/cti/layers/moe.py`
+- `python/cti/layers/norm.py`
+- `python/cti/layers/rotary.py`
+- `python/cti/llm/__init__.py`
+- `python/cti/llm/llm.py`
+- `python/cti/models/base.py`
+- `python/cti/models/checkpoint.py`
+- `python/cti/models/config.py`
+- `python/cti/models/dflash/model.py`
+- `python/cti/models/_download.py`
+- `python/cti/models/__init__.py`
+- `python/cti/models/mapping.py`
+- `python/cti/models/qwen3/config.py`
+- `python/cti/models/qwen3/model.py`
+- `python/cti/models/qwen3_moe/model.py`
+- `python/cti/models/register.py`
+- `python/cti/models/weight.py`
+- `python/cti/moe/base.py`
+- `python/cti/moe/fused.py`
+- `python/cti/moe/__init__.py`
+- `python/cti/plan.py`
+- `python/cti/protocol/_backend.py`
+- `python/cti/protocol/_codec.py`
+- `python/cti/protocol/_frontend.py`
+- `python/cti/protocol/__init__.py`
+- `python/cti/protocol/link/_queue.py`
+- `python/cti/protocol/link/_transport.py`
+- `python/cti/protocol/_tokenizer.py`
+- `python/cti/resolution.py`
+- `python/cti/server/api_server.py`
+- `python/cti/server/args.py`
+- `python/cti/server/frontend.py`
+- `python/cti/server/__init__.py`
+- `python/cti/server/launch.py`
+- `python/cti/tokenizer/detokenize.py`
+- `python/cti/tokenizer/server.py`
+- `python/cti/tokenizer/text.py`
+- `python/cti/utils/arch.py`
+- `python/cti/utils/__init__.py`
+- `python/cti/utils/logger.py`
+- `python/cti/utils/misc.py`
+- `python/cti/utils/torch_utils.py`
+- `python/cti/worker/_device_memory.py`
+- `python/cti/worker/_model_host.py`
+
+----- BEGIN MINI-SGLANG MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2026 sgl-project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END MINI-SGLANG MIT LICENSE (VERBATIM) -----
+
+===============================================================================
+Hugging Face Transformers (Qwen3.5 adaptations)
+===============================================================================
+
+The Qwen3.5 adaptations use Transformers 5.16.1, fixed revision
+93c8b7b485963a10800c91f55304db6be211c2bd.
+
+Immutable revision, source, and license:
+https://github.com/huggingface/transformers/commit/93c8b7b485963a10800c91f55304db6be211c2bd
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/src/transformers/models/qwen3_5/modeling_qwen3_5.py
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/LICENSE
+
+Upstream license: Apache-2.0, reproduced verbatim below. The pinned Transformers
+LICENSE includes "Copyright 2018- The Hugging Face team. All rights reserved." The
+pinned source has no separate root NOTICE. Each file listed here carries the upstream
+copyright statement of every Transformers source it adapts and an "Adapted from" line
+marking it as modified by cti.
+
+The following files adapt
+`src/transformers/models/qwen3_5/modeling_qwen3_5.py`, whose copyright is:
+
+Copyright 2025 The Qwen Team and The HuggingFace Inc. team. All rights reserved.
+
+- `python/cti/models/qwen3_5/model.py`
+- `python/cti/layers/rotary.py`
+- `python/cti/models/qwen3_5/vision.py`
+- `python/cti/models/qwen3_5_moe/model.py`
+- `python/cti/models/qwen3_5_moe/vision.py` (a verbatim copy of `python/cti/models/qwen3_5/vision.py`)
+- `python/cti/multimodal/qwen3_5/rope.py`
+- `tests/modules/models/test_qwen3_5_model.py`
+- `tests/modules/layers/test_rotary.py`
+- `tests/support/gated_delta_net.py`
+- `tests/gpu/layers/test_layer_operations.py`
+
+`python/cti/layers/rotary.py` also adapts the YaRN helpers from:
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/src/transformers/modeling_rope_utils.py
+
+Copyright 2024 The HuggingFace Team. All rights reserved.
+
+`python/cti/models/qwen3_5_moe/model.py` also adapts the Qwen3.5-MoE sparse
+block from:
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/src/transformers/models/qwen3_5_moe/modeling_qwen3_5_moe.py
+
+Copyright 2025 The Qwen Team and The HuggingFace Inc. team. All rights reserved.
+
+`python/cti/models/qwen3_5/vision.py` and its copy
+`python/cti/models/qwen3_5_moe/vision.py` also adapt the patch position and
+interpolation helpers from:
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/src/transformers/vision_utils.py
+
+Copyright 2026 The HuggingFace Inc. team. All rights reserved.
+
+`python/cti/models/qwen3_moe/model.py` (adapted from Mini-SGLang above) and
+`python/cti/models/qwen3_moe/config.py` implement, without copying its code, the
+semantics of:
+https://github.com/huggingface/transformers/blob/93c8b7b485963a10800c91f55304db6be211c2bd/src/transformers/models/qwen3_moe/modeling_qwen3_moe.py
+
+Copyright 2025 The Qwen team, Alibaba Group and the HuggingFace Inc. team. All rights reserved.
+
+----- BEGIN APACHE LICENSE 2.0 (VERBATIM) -----
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+----- END APACHE LICENSE 2.0 (VERBATIM) -----
+
+===============================================================================
+DFlash
+===============================================================================
+
+`python/cti/models/dflash/model.py` implements the DFlash v1 draft model on
+cti's lower layers. Its context projection, block-versus-context attention and
+checkpoint names are adapted from the official DFlash implementation; its decoder
+composition retains the Mini-SGLang-derived layer lineage documented above. The round
+semantics of `python/cti/inference/_execution/_speculative/dflash.py` follow the
+same reference; that file is written for cti's runtime. Production code imports
+no official DFlash module.
+
+Upstream project:
+https://github.com/z-lab/dflash
+
+Fixed reference revision:
+07ebd93db9f472af339b644bb70221ad8428328a
+
+Immutable source and license:
+https://github.com/z-lab/dflash/blob/07ebd93db9f472af339b644bb70221ad8428328a/dflash/model.py
+https://github.com/z-lab/dflash/blob/07ebd93db9f472af339b644bb70221ad8428328a/LICENSE
+
+Upstream license: MIT, copyright (c) 2026 Z Lab, reproduced verbatim below. The source
+header preserves Z Lab's copyright.
+
+Files adapted from DFlash:
+- `python/cti/models/dflash/model.py`
+
+----- BEGIN DFLASH MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2026 Z Lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END DFLASH MIT LICENSE (VERBATIM) -----

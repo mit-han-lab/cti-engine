@@ -1,0 +1,651 @@
+[tp 1, rank 0]
+model.embed_tokens.weight (67, 32)
+model.layers.0.self_attn.qkv_gate_proj.weight (3072, 32) | q[0:1024] k[1024:1536] v[1536:2048] gate[2048:3072]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 1024) | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (8, 32, 32)
+model.layers.0.mlp.experts.down_proj (8, 32, 16)
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (48, 32) | gate[0:24] up[24:48]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 24) | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (3088, 32) | q[0:512] k[512:1024] v[1024:2048] z[2048:3072] b[3072:3080] a[3080:3088]
+model.layers.1.linear_attn.gdn.conv_weight (2048, 1, 4)
+model.layers.1.linear_attn.gdn.A_log (8,)
+model.layers.1.linear_attn.gdn.dt_bias (8,)
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 1024) | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (8, 32, 32)
+model.layers.1.mlp.experts.down_proj (8, 32, 16)
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (48, 32) | gate[0:24] up[24:48]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 24) | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (3088, 32) | q[0:512] k[512:1024] v[1024:2048] z[2048:3072] b[3072:3080] a[3080:3088]
+model.layers.2.linear_attn.gdn.conv_weight (2048, 1, 4)
+model.layers.2.linear_attn.gdn.A_log (8,)
+model.layers.2.linear_attn.gdn.dt_bias (8,)
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 1024) | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (8, 32, 32)
+model.layers.2.mlp.experts.down_proj (8, 32, 16)
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (48, 32) | gate[0:24] up[24:48]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 24) | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (3072, 32) | q[0:1024] k[1024:1536] v[1536:2048] gate[2048:3072]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 1024) | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (8, 32, 32)
+model.layers.3.mlp.experts.down_proj (8, 32, 16)
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (48, 32) | gate[0:24] up[24:48]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 24) | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (67, 32)
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 4 query, 2 KV heads of 256
+attention 1: 4 query, 2 KV heads of 256
+gated delta net 0: 4 key, 8 value heads; state (8, 128, 128), conv 3 x 2048
+gated delta net 1: 4 key, 8 value heads; state (8, 128, 128), conv 3 x 2048
+[tp 2, rank 0]
+model.embed_tokens.weight (34, 32) rows[0:34]/34
+model.layers.0.self_attn.qkv_gate_proj.weight (1536, 32) rows[0:512] rows[0:256] rows[0:256] rows[0:512] | q[0:512] k[512:768] v[768:1024] gate[1024:1536]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 512) cols[0:512] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (4, 32, 32) experts[0:4]
+model.layers.0.mlp.experts.down_proj (4, 32, 16) experts[0:4]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[0:12] rows[0:12] | gate[0:12] up[12:24]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 12) cols[0:12] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (1544, 32) rows[0:256] rows[0:256] rows[0:512] rows[0:512] rows[0:4] rows[0:4] | q[0:256] k[256:512] v[512:1024] z[1024:1536] b[1536:1540] a[1540:1544]
+model.layers.1.linear_attn.gdn.conv_weight (1024, 1, 4) rows[0:256] rows[0:256] rows[0:512]
+model.layers.1.linear_attn.gdn.A_log (4,) rows[0:4]
+model.layers.1.linear_attn.gdn.dt_bias (4,) rows[0:4]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 512) cols[0:512] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (4, 32, 32) experts[0:4]
+model.layers.1.mlp.experts.down_proj (4, 32, 16) experts[0:4]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[0:12] rows[0:12] | gate[0:12] up[12:24]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 12) cols[0:12] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (1544, 32) rows[0:256] rows[0:256] rows[0:512] rows[0:512] rows[0:4] rows[0:4] | q[0:256] k[256:512] v[512:1024] z[1024:1536] b[1536:1540] a[1540:1544]
+model.layers.2.linear_attn.gdn.conv_weight (1024, 1, 4) rows[0:256] rows[0:256] rows[0:512]
+model.layers.2.linear_attn.gdn.A_log (4,) rows[0:4]
+model.layers.2.linear_attn.gdn.dt_bias (4,) rows[0:4]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 512) cols[0:512] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (4, 32, 32) experts[0:4]
+model.layers.2.mlp.experts.down_proj (4, 32, 16) experts[0:4]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[0:12] rows[0:12] | gate[0:12] up[12:24]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 12) cols[0:12] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1536, 32) rows[0:512] rows[0:256] rows[0:256] rows[0:512] | q[0:512] k[512:768] v[768:1024] gate[1024:1536]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 512) cols[0:512] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (4, 32, 32) experts[0:4]
+model.layers.3.mlp.experts.down_proj (4, 32, 16) experts[0:4]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[0:12] rows[0:12] | gate[0:12] up[12:24]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 12) cols[0:12] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (34, 32) rows[0:34]/34
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 2 query, 1 KV heads of 256
+attention 1: 2 query, 1 KV heads of 256
+gated delta net 0: 2 key, 4 value heads; state (4, 128, 128), conv 3 x 1024
+gated delta net 1: 2 key, 4 value heads; state (4, 128, 128), conv 3 x 1024
+[tp 2, rank 1]
+model.embed_tokens.weight (34, 32) rows[34:67]/34
+model.layers.0.self_attn.qkv_gate_proj.weight (1536, 32) rows[512:1024] rows[256:512] rows[256:512] rows[512:1024] | q[0:512] k[512:768] v[768:1024] gate[1024:1536]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 512) cols[512:1024] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (4, 32, 32) experts[4:8]
+model.layers.0.mlp.experts.down_proj (4, 32, 16) experts[4:8]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[12:24] rows[12:24] | gate[0:12] up[12:24]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 12) cols[12:24] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (1544, 32) rows[256:512] rows[256:512] rows[512:1024] rows[512:1024] rows[4:8] rows[4:8] | q[0:256] k[256:512] v[512:1024] z[1024:1536] b[1536:1540] a[1540:1544]
+model.layers.1.linear_attn.gdn.conv_weight (1024, 1, 4) rows[256:512] rows[256:512] rows[512:1024]
+model.layers.1.linear_attn.gdn.A_log (4,) rows[4:8]
+model.layers.1.linear_attn.gdn.dt_bias (4,) rows[4:8]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 512) cols[512:1024] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (4, 32, 32) experts[4:8]
+model.layers.1.mlp.experts.down_proj (4, 32, 16) experts[4:8]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[12:24] rows[12:24] | gate[0:12] up[12:24]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 12) cols[12:24] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (1544, 32) rows[256:512] rows[256:512] rows[512:1024] rows[512:1024] rows[4:8] rows[4:8] | q[0:256] k[256:512] v[512:1024] z[1024:1536] b[1536:1540] a[1540:1544]
+model.layers.2.linear_attn.gdn.conv_weight (1024, 1, 4) rows[256:512] rows[256:512] rows[512:1024]
+model.layers.2.linear_attn.gdn.A_log (4,) rows[4:8]
+model.layers.2.linear_attn.gdn.dt_bias (4,) rows[4:8]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 512) cols[512:1024] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (4, 32, 32) experts[4:8]
+model.layers.2.mlp.experts.down_proj (4, 32, 16) experts[4:8]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[12:24] rows[12:24] | gate[0:12] up[12:24]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 12) cols[12:24] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1536, 32) rows[512:1024] rows[256:512] rows[256:512] rows[512:1024] | q[0:512] k[512:768] v[768:1024] gate[1024:1536]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 512) cols[512:1024] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (4, 32, 32) experts[4:8]
+model.layers.3.mlp.experts.down_proj (4, 32, 16) experts[4:8]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (24, 32) rows[12:24] rows[12:24] | gate[0:12] up[12:24]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 12) cols[12:24] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (34, 32) rows[34:67]/34
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 2 query, 1 KV heads of 256
+attention 1: 2 query, 1 KV heads of 256
+gated delta net 0: 2 key, 4 value heads; state (4, 128, 128), conv 3 x 1024
+gated delta net 1: 2 key, 4 value heads; state (4, 128, 128), conv 3 x 1024
+[tp 4, rank 0]
+model.embed_tokens.weight (17, 32) rows[0:17]/17
+model.layers.0.self_attn.qkv_gate_proj.weight (1024, 32) rows[0:256] rows[0:256]*2@0 rows[0:256]*2@0 rows[0:256] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[0:256] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[0:2]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[0:2]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[0:6] rows[0:6] | gate[0:6] up[6:12]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 6) cols[0:6] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (772, 32) rows[0:128] rows[0:128] rows[0:256] rows[0:256] rows[0:2] rows[0:2] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.1.linear_attn.gdn.conv_weight (512, 1, 4) rows[0:128] rows[0:128] rows[0:256]
+model.layers.1.linear_attn.gdn.A_log (2,) rows[0:2]
+model.layers.1.linear_attn.gdn.dt_bias (2,) rows[0:2]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 256) cols[0:256] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (2, 32, 32) experts[0:2]
+model.layers.1.mlp.experts.down_proj (2, 32, 16) experts[0:2]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[0:6] rows[0:6] | gate[0:6] up[6:12]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 6) cols[0:6] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (772, 32) rows[0:128] rows[0:128] rows[0:256] rows[0:256] rows[0:2] rows[0:2] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.2.linear_attn.gdn.conv_weight (512, 1, 4) rows[0:128] rows[0:128] rows[0:256]
+model.layers.2.linear_attn.gdn.A_log (2,) rows[0:2]
+model.layers.2.linear_attn.gdn.dt_bias (2,) rows[0:2]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 256) cols[0:256] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (2, 32, 32) experts[0:2]
+model.layers.2.mlp.experts.down_proj (2, 32, 16) experts[0:2]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[0:6] rows[0:6] | gate[0:6] up[6:12]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 6) cols[0:6] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1024, 32) rows[0:256] rows[0:256]*2@0 rows[0:256]*2@0 rows[0:256] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 256) cols[0:256] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (2, 32, 32) experts[0:2]
+model.layers.3.mlp.experts.down_proj (2, 32, 16) experts[0:2]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[0:6] rows[0:6] | gate[0:6] up[6:12]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 6) cols[0:6] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[0:17]/17
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 1 query, 1 KV heads of 256
+attention 1: 1 query, 1 KV heads of 256
+gated delta net 0: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+gated delta net 1: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+[tp 4, rank 1]
+model.embed_tokens.weight (17, 32) rows[17:34]/17
+model.layers.0.self_attn.qkv_gate_proj.weight (1024, 32) rows[256:512] rows[0:256]*2@1 rows[0:256]*2@1 rows[256:512] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[256:512] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[2:4]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[2:4]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[6:12] rows[6:12] | gate[0:6] up[6:12]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 6) cols[6:12] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (772, 32) rows[128:256] rows[128:256] rows[256:512] rows[256:512] rows[2:4] rows[2:4] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.1.linear_attn.gdn.conv_weight (512, 1, 4) rows[128:256] rows[128:256] rows[256:512]
+model.layers.1.linear_attn.gdn.A_log (2,) rows[2:4]
+model.layers.1.linear_attn.gdn.dt_bias (2,) rows[2:4]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 256) cols[256:512] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (2, 32, 32) experts[2:4]
+model.layers.1.mlp.experts.down_proj (2, 32, 16) experts[2:4]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[6:12] rows[6:12] | gate[0:6] up[6:12]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 6) cols[6:12] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (772, 32) rows[128:256] rows[128:256] rows[256:512] rows[256:512] rows[2:4] rows[2:4] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.2.linear_attn.gdn.conv_weight (512, 1, 4) rows[128:256] rows[128:256] rows[256:512]
+model.layers.2.linear_attn.gdn.A_log (2,) rows[2:4]
+model.layers.2.linear_attn.gdn.dt_bias (2,) rows[2:4]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 256) cols[256:512] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (2, 32, 32) experts[2:4]
+model.layers.2.mlp.experts.down_proj (2, 32, 16) experts[2:4]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[6:12] rows[6:12] | gate[0:6] up[6:12]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 6) cols[6:12] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1024, 32) rows[256:512] rows[0:256]*2@1 rows[0:256]*2@1 rows[256:512] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 256) cols[256:512] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (2, 32, 32) experts[2:4]
+model.layers.3.mlp.experts.down_proj (2, 32, 16) experts[2:4]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[6:12] rows[6:12] | gate[0:6] up[6:12]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 6) cols[6:12] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[17:34]/17
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 1 query, 1 KV heads of 256
+attention 1: 1 query, 1 KV heads of 256
+gated delta net 0: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+gated delta net 1: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+[tp 4, rank 2]
+model.embed_tokens.weight (17, 32) rows[34:51]/17
+model.layers.0.self_attn.qkv_gate_proj.weight (1024, 32) rows[512:768] rows[256:512]*2@0 rows[256:512]*2@0 rows[512:768] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[512:768] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[4:6]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[4:6]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[12:18] rows[12:18] | gate[0:6] up[6:12]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 6) cols[12:18] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (772, 32) rows[256:384] rows[256:384] rows[512:768] rows[512:768] rows[4:6] rows[4:6] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.1.linear_attn.gdn.conv_weight (512, 1, 4) rows[256:384] rows[256:384] rows[512:768]
+model.layers.1.linear_attn.gdn.A_log (2,) rows[4:6]
+model.layers.1.linear_attn.gdn.dt_bias (2,) rows[4:6]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 256) cols[512:768] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (2, 32, 32) experts[4:6]
+model.layers.1.mlp.experts.down_proj (2, 32, 16) experts[4:6]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[12:18] rows[12:18] | gate[0:6] up[6:12]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 6) cols[12:18] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (772, 32) rows[256:384] rows[256:384] rows[512:768] rows[512:768] rows[4:6] rows[4:6] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.2.linear_attn.gdn.conv_weight (512, 1, 4) rows[256:384] rows[256:384] rows[512:768]
+model.layers.2.linear_attn.gdn.A_log (2,) rows[4:6]
+model.layers.2.linear_attn.gdn.dt_bias (2,) rows[4:6]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 256) cols[512:768] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (2, 32, 32) experts[4:6]
+model.layers.2.mlp.experts.down_proj (2, 32, 16) experts[4:6]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[12:18] rows[12:18] | gate[0:6] up[6:12]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 6) cols[12:18] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1024, 32) rows[512:768] rows[256:512]*2@0 rows[256:512]*2@0 rows[512:768] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 256) cols[512:768] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (2, 32, 32) experts[4:6]
+model.layers.3.mlp.experts.down_proj (2, 32, 16) experts[4:6]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[12:18] rows[12:18] | gate[0:6] up[6:12]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 6) cols[12:18] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[34:51]/17
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 1 query, 1 KV heads of 256
+attention 1: 1 query, 1 KV heads of 256
+gated delta net 0: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+gated delta net 1: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+[tp 4, rank 3]
+model.embed_tokens.weight (17, 32) rows[51:67]/17
+model.layers.0.self_attn.qkv_gate_proj.weight (1024, 32) rows[768:1024] rows[256:512]*2@1 rows[256:512]*2@1 rows[768:1024] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.0.self_attn.q_norm.weight (256,)
+model.layers.0.self_attn.k_norm.weight (256,)
+model.layers.0.self_attn.o_proj.weight (32, 256) cols[768:1024] | full[0:32]
+model.layers.0.mlp.experts.gate_up_proj (2, 32, 32) experts[6:8]
+model.layers.0.mlp.experts.down_proj (2, 32, 16) experts[6:8]
+model.layers.0.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.0.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[18:24] rows[18:24] | gate[0:6] up[6:12]
+model.layers.0.mlp.shared_expert.down_proj.weight (32, 6) cols[18:24] | full[0:32]
+model.layers.0.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.layers.1.linear_attn.in_proj.weight (772, 32) rows[384:512] rows[384:512] rows[768:1024] rows[768:1024] rows[6:8] rows[6:8] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.1.linear_attn.gdn.conv_weight (512, 1, 4) rows[384:512] rows[384:512] rows[768:1024]
+model.layers.1.linear_attn.gdn.A_log (2,) rows[6:8]
+model.layers.1.linear_attn.gdn.dt_bias (2,) rows[6:8]
+model.layers.1.linear_attn.gdn.norm_weight (128,)
+model.layers.1.linear_attn.out_proj.weight (32, 256) cols[768:1024] | full[0:32]
+model.layers.1.mlp.experts.gate_up_proj (2, 32, 32) experts[6:8]
+model.layers.1.mlp.experts.down_proj (2, 32, 16) experts[6:8]
+model.layers.1.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.1.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[18:24] rows[18:24] | gate[0:6] up[6:12]
+model.layers.1.mlp.shared_expert.down_proj.weight (32, 6) cols[18:24] | full[0:32]
+model.layers.1.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.1.input_layernorm.weight (32,)
+model.layers.1.post_attention_layernorm.weight (32,)
+model.layers.2.linear_attn.in_proj.weight (772, 32) rows[384:512] rows[384:512] rows[768:1024] rows[768:1024] rows[6:8] rows[6:8] | q[0:128] k[128:256] v[256:512] z[512:768] b[768:770] a[770:772]
+model.layers.2.linear_attn.gdn.conv_weight (512, 1, 4) rows[384:512] rows[384:512] rows[768:1024]
+model.layers.2.linear_attn.gdn.A_log (2,) rows[6:8]
+model.layers.2.linear_attn.gdn.dt_bias (2,) rows[6:8]
+model.layers.2.linear_attn.gdn.norm_weight (128,)
+model.layers.2.linear_attn.out_proj.weight (32, 256) cols[768:1024] | full[0:32]
+model.layers.2.mlp.experts.gate_up_proj (2, 32, 32) experts[6:8]
+model.layers.2.mlp.experts.down_proj (2, 32, 16) experts[6:8]
+model.layers.2.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.2.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[18:24] rows[18:24] | gate[0:6] up[6:12]
+model.layers.2.mlp.shared_expert.down_proj.weight (32, 6) cols[18:24] | full[0:32]
+model.layers.2.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.2.input_layernorm.weight (32,)
+model.layers.2.post_attention_layernorm.weight (32,)
+model.layers.3.self_attn.qkv_gate_proj.weight (1024, 32) rows[768:1024] rows[256:512]*2@1 rows[256:512]*2@1 rows[768:1024] | q[0:256] k[256:512] v[512:768] gate[768:1024]
+model.layers.3.self_attn.q_norm.weight (256,)
+model.layers.3.self_attn.k_norm.weight (256,)
+model.layers.3.self_attn.o_proj.weight (32, 256) cols[768:1024] | full[0:32]
+model.layers.3.mlp.experts.gate_up_proj (2, 32, 32) experts[6:8]
+model.layers.3.mlp.experts.down_proj (2, 32, 16) experts[6:8]
+model.layers.3.mlp.gate.weight (8, 32) | full[0:8]
+model.layers.3.mlp.shared_expert.gate_up_proj.weight (12, 32) rows[18:24] rows[18:24] | gate[0:6] up[6:12]
+model.layers.3.mlp.shared_expert.down_proj.weight (32, 6) cols[18:24] | full[0:32]
+model.layers.3.mlp.shared_expert_gate.weight (1, 32) | full[0:1]
+model.layers.3.input_layernorm.weight (32,)
+model.layers.3.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+lm_head.weight (17, 32) rows[51:67]/17
+visual.patch_embed.proj.weight (16, 24) | full[0:16]
+visual.patch_embed.proj.bias (16,)
+visual.pos_embed.weight (16, 16)
+visual.blocks.0.norm1.weight (16,)
+visual.blocks.0.norm1.bias (16,)
+visual.blocks.0.norm2.weight (16,)
+visual.blocks.0.norm2.bias (16,)
+visual.blocks.0.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.0.attn.qkv.bias (48,)
+visual.blocks.0.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.0.attn.proj.bias (16,)
+visual.blocks.0.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.0.mlp.linear_fc1.bias (24,)
+visual.blocks.0.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.0.mlp.linear_fc2.bias (16,)
+visual.blocks.1.norm1.weight (16,)
+visual.blocks.1.norm1.bias (16,)
+visual.blocks.1.norm2.weight (16,)
+visual.blocks.1.norm2.bias (16,)
+visual.blocks.1.attn.qkv.weight (48, 16) | full[0:48]
+visual.blocks.1.attn.qkv.bias (48,)
+visual.blocks.1.attn.proj.weight (16, 16) | full[0:16]
+visual.blocks.1.attn.proj.bias (16,)
+visual.blocks.1.mlp.linear_fc1.weight (24, 16) | full[0:24]
+visual.blocks.1.mlp.linear_fc1.bias (24,)
+visual.blocks.1.mlp.linear_fc2.weight (16, 24) | full[0:16]
+visual.blocks.1.mlp.linear_fc2.bias (16,)
+visual.merger.norm.weight (16,)
+visual.merger.norm.bias (16,)
+visual.merger.linear_fc1.weight (64, 64) | full[0:64]
+visual.merger.linear_fc1.bias (64,)
+visual.merger.linear_fc2.weight (32, 64) | full[0:32]
+visual.merger.linear_fc2.bias (32,)
+attention 0: 1 query, 1 KV heads of 256
+attention 1: 1 query, 1 KV heads of 256
+gated delta net 0: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512
+gated delta net 1: 1 key, 2 value heads; state (2, 128, 128), conv 3 x 512

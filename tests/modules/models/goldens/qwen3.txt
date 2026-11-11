@@ -1,0 +1,84 @@
+[tp 1, rank 0]
+model.embed_tokens.weight (67, 32)
+model.layers.0.self_attn.qkv_proj.weight (512, 32) | q[0:256] k[256:384] v[384:512]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 256) | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (96, 32) | gate[0:48] up[48:96]
+model.layers.0.mlp.down_proj.weight (32, 48) | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 4 query, 2 KV heads of 64
+[tp 2, rank 0]
+model.embed_tokens.weight (34, 32) rows[0:34]/34
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[0:128] rows[0:64] rows[0:64] | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[0:128] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (48, 32) rows[0:24] rows[0:24] | gate[0:24] up[24:48]
+model.layers.0.mlp.down_proj.weight (32, 24) cols[0:24] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 2 query, 1 KV heads of 64
+[tp 2, rank 1]
+model.embed_tokens.weight (34, 32) rows[34:67]/34
+model.layers.0.self_attn.qkv_proj.weight (256, 32) rows[128:256] rows[64:128] rows[64:128] | q[0:128] k[128:192] v[192:256]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 128) cols[128:256] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (48, 32) rows[24:48] rows[24:48] | gate[0:24] up[24:48]
+model.layers.0.mlp.down_proj.weight (32, 24) cols[24:48] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 2 query, 1 KV heads of 64
+[tp 4, rank 0]
+model.embed_tokens.weight (17, 32) rows[0:17]/17
+model.layers.0.self_attn.qkv_proj.weight (192, 32) rows[0:64] rows[0:64]*2@0 rows[0:64]*2@0 | q[0:64] k[64:128] v[128:192]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 64) cols[0:64] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (24, 32) rows[0:12] rows[0:12] | gate[0:12] up[12:24]
+model.layers.0.mlp.down_proj.weight (32, 12) cols[0:12] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 1 query, 1 KV heads of 64
+[tp 4, rank 1]
+model.embed_tokens.weight (17, 32) rows[17:34]/17
+model.layers.0.self_attn.qkv_proj.weight (192, 32) rows[64:128] rows[0:64]*2@1 rows[0:64]*2@1 | q[0:64] k[64:128] v[128:192]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 64) cols[64:128] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (24, 32) rows[12:24] rows[12:24] | gate[0:12] up[12:24]
+model.layers.0.mlp.down_proj.weight (32, 12) cols[12:24] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 1 query, 1 KV heads of 64
+[tp 4, rank 2]
+model.embed_tokens.weight (17, 32) rows[34:51]/17
+model.layers.0.self_attn.qkv_proj.weight (192, 32) rows[128:192] rows[64:128]*2@0 rows[64:128]*2@0 | q[0:64] k[64:128] v[128:192]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 64) cols[128:192] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (24, 32) rows[24:36] rows[24:36] | gate[0:12] up[12:24]
+model.layers.0.mlp.down_proj.weight (32, 12) cols[24:36] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 1 query, 1 KV heads of 64
+[tp 4, rank 3]
+model.embed_tokens.weight (17, 32) rows[51:67]/17
+model.layers.0.self_attn.qkv_proj.weight (192, 32) rows[192:256] rows[64:128]*2@1 rows[64:128]*2@1 | q[0:64] k[64:128] v[128:192]
+model.layers.0.self_attn.q_norm.weight (64,)
+model.layers.0.self_attn.k_norm.weight (64,)
+model.layers.0.self_attn.o_proj.weight (32, 64) cols[192:256] | full[0:32]
+model.layers.0.mlp.gate_up_proj.weight (24, 32) rows[36:48] rows[36:48] | gate[0:12] up[12:24]
+model.layers.0.mlp.down_proj.weight (32, 12) cols[36:48] | full[0:32]
+model.layers.0.input_layernorm.weight (32,)
+model.layers.0.post_attention_layernorm.weight (32,)
+model.norm.weight (32,)
+attention 0: 1 query, 1 KV heads of 64

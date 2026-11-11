@@ -1,0 +1,182 @@
+[kv 1, tp 1, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (384, 64) | q[0:256] k[256:320] v[320:384]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 256) | full[0:64]
+layers.0.mlp.gate_up_proj.weight (256, 64) | gate[0:128] up[128:256]
+layers.0.mlp.down_proj.weight (64, 128) | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 4 query, 1 KV heads of 64
+[kv 1, tp 2, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (256, 64) rows[0:128] rows[0:64]*2@0 rows[0:64]*2@0 | q[0:128] k[128:192] v[192:256]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 128) cols[0:128] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (128, 64) rows[0:64] rows[0:64] | gate[0:64] up[64:128]
+layers.0.mlp.down_proj.weight (64, 64) cols[0:64] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 2 query, 1 KV heads of 64
+[kv 1, tp 2, rank 1]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (256, 64) rows[128:256] rows[0:64]*2@1 rows[0:64]*2@1 | q[0:128] k[128:192] v[192:256]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 128) cols[128:256] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (128, 64) rows[64:128] rows[64:128] | gate[0:64] up[64:128]
+layers.0.mlp.down_proj.weight (64, 64) cols[64:128] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 2 query, 1 KV heads of 64
+[kv 1, tp 4, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[0:64] rows[0:64]*4@0 rows[0:64]*4@0 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[0:64] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[0:32] rows[0:32] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[0:32] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 1, tp 4, rank 1]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[64:128] rows[0:64]*4@1 rows[0:64]*4@1 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[64:128] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[32:64] rows[32:64] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[32:64] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 1, tp 4, rank 2]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[128:192] rows[0:64]*4@2 rows[0:64]*4@2 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[128:192] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[64:96] rows[64:96] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[64:96] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 1, tp 4, rank 3]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[192:256] rows[0:64]*4@3 rows[0:64]*4@3 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[192:256] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[96:128] rows[96:128] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[96:128] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 2, tp 1, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (512, 64) | q[0:256] k[256:384] v[384:512]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 256) | full[0:64]
+layers.0.mlp.gate_up_proj.weight (256, 64) | gate[0:128] up[128:256]
+layers.0.mlp.down_proj.weight (64, 128) | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 4 query, 2 KV heads of 64
+[kv 2, tp 2, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (256, 64) rows[0:128] rows[0:64] rows[0:64] | q[0:128] k[128:192] v[192:256]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 128) cols[0:128] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (128, 64) rows[0:64] rows[0:64] | gate[0:64] up[64:128]
+layers.0.mlp.down_proj.weight (64, 64) cols[0:64] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 2 query, 1 KV heads of 64
+[kv 2, tp 2, rank 1]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (256, 64) rows[128:256] rows[64:128] rows[64:128] | q[0:128] k[128:192] v[192:256]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 128) cols[128:256] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (128, 64) rows[64:128] rows[64:128] | gate[0:64] up[64:128]
+layers.0.mlp.down_proj.weight (64, 64) cols[64:128] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 2 query, 1 KV heads of 64
+[kv 2, tp 4, rank 0]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[0:64] rows[0:64]*2@0 rows[0:64]*2@0 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[0:64] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[0:32] rows[0:32] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[0:32] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 2, tp 4, rank 1]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[64:128] rows[0:64]*2@1 rows[0:64]*2@1 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[64:128] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[32:64] rows[32:64] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[32:64] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 2, tp 4, rank 2]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[128:192] rows[64:128]*2@0 rows[64:128]*2@0 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[128:192] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[64:96] rows[64:96] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[64:96] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64
+[kv 2, tp 4, rank 3]
+fc.weight (64, 320) | full[0:64]
+hidden_norm.weight (64,)
+layers.0.self_attn.qkv_proj.weight (192, 64) rows[192:256] rows[64:128]*2@1 rows[64:128]*2@1 | q[0:64] k[64:128] v[128:192]
+layers.0.self_attn.q_norm.weight (64,)
+layers.0.self_attn.k_norm.weight (64,)
+layers.0.self_attn.o_proj.weight (64, 64) cols[192:256] | full[0:64]
+layers.0.mlp.gate_up_proj.weight (64, 64) rows[96:128] rows[96:128] | gate[0:32] up[32:64]
+layers.0.mlp.down_proj.weight (64, 32) cols[96:128] | full[0:64]
+layers.0.input_layernorm.weight (64,)
+layers.0.post_attention_layernorm.weight (64,)
+norm.weight (64,)
+attention 0: 1 query, 1 KV heads of 64

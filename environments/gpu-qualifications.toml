@@ -1,0 +1,17 @@
+[rtx5090]
+visible_device_count = 1
+device_name_contains = "RTX 5090"
+capability = [12, 0]
+flash_attention_arches = ["120"]
+
+[dgx-spark]
+visible_device_count = 1
+device_name_contains = "NVIDIA GB10"
+capability = [12, 1]
+flash_attention_arches = ["120"]
+
+[rtx-pro-6000-pair]
+visible_device_count = 2
+device_name_contains = "RTX PRO 6000 Blackwell"
+capability = [12, 0]
+flash_attention_arches = ["120"]

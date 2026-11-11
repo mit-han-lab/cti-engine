@@ -1,0 +1,31 @@
+# The image takes only what installs and runs the engine, so files Git ignores in a working
+# tree (credentials, benchmark output, local environments) never reach it. It has no .git:
+# the build writes REVISION from its build argument instead.
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!THIRD_PARTY_NOTICES
+!python
+!scripts
+!environments
+!cookbook
+!docker
+
+# Within those, no hidden files and nothing else .gitignore excludes.
+**/.*
+**/__pycache__
+**/*.py[cod]
+**/*$py.class
+**/*.dist-info
+**/*.egg-info
+**/*.json
+**/*.jsonl
+**/*.nsys-rep
+**/*.ncu-rep
+**/build
+**/dist
+**/*.tar.gz
+**/venv
+**/env
+**/htmlcov
