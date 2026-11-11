@@ -6,6 +6,10 @@
 
 **Continuous Training and Inference** — a single-GPU engine that serves and fine-tunes the same model instance.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mit-han-lab/cti-engine/main/assets/concept.svg" alt="One model serves user requests and trains on new data, switching between the two" width="480">
+</p>
+
 [**Features**](https://github.com/mit-han-lab/cti-engine/blob/main/docs/features.md) | [**Configuration**](https://github.com/mit-han-lab/cti-engine/blob/main/docs/configuration.md) | [**Architecture**](https://github.com/mit-han-lab/cti-engine/blob/main/docs/structures.md) | [**Cookbook**](https://github.com/mit-han-lab/cti-engine/tree/main/cookbook) | [**Benchmarks**](https://github.com/mit-han-lab/cti-engine/tree/main/benchmark)
 
 ---
