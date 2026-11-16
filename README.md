@@ -30,6 +30,14 @@ early release: the surface below is what we have tested, not what we plan.
   graphs for decode and breakable graphs for prompt and mixed batches, priority
   admission, and DFlash-family speculative decoding.
 
+## Supported models and hardware
+
+- **Models**: Qwen3 (0.6B, 1.7B, 4B, 8B), Qwen3.5 (0.8B, 2B, 4B, 9B), Qwen3.8-27B,
+  Qwen3-MoE (30B-A3B), Qwen3.5-MoE (35B-A3B)
+- **Hardware**: RTX 5090, RTX PRO 6000, DGX Spark
+
+Per-model status and details: [`docs/features.md`](docs/features.md#supported-models).
+
 ## Status
 
 - **Models**: dense Qwen3 is the maintained profile, gated against Transformers.

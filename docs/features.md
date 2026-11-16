@@ -191,11 +191,12 @@ LoRA and training alike, as each model's capabilities declare; see
 remains follow-up work. DP, PP, CP, multi-node execution, and HTTP training are not V0
 goals.
 
-The V0 release qualification targets one RTX 5090 (SM120, x86-64) and one DGX Spark
-GB10 (SM121, Arm64). A named qualification validates the exact device identity and
-native provider images; it does not generalize to another GPU. DGX Spark uses unified
-memory, so a physical-memory measurement is reported as unavailable when the platform
-cannot expose it rather than being inferred from process-local allocator telemetry.
+The V0 release qualification targets one RTX 5090 (SM120, x86-64), one RTX PRO 6000
+(SM120, x86-64) and one DGX Spark GB10 (SM121, Arm64). A named qualification validates
+the exact device identity and native provider images; it does not generalize to another
+GPU. DGX Spark uses unified memory, so a physical-memory measurement is reported as
+unavailable when the platform cannot expose it rather than being inferred from
+process-local allocator telemetry.
 
 V0 configuration supports the typed Python constructors, the inference CLI, and a
 strict YAML entrypoint shared by `LLM.from_yaml`, `OnlineServer.from_yaml`, and
